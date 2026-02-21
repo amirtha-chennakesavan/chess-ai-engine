@@ -6,17 +6,17 @@
 ╚══════════════════════════════════════════════════════════════╝
 
 FEATURES:
-  ✅ Full chess with all rules (castling, en passant, promotion)
-  ✅ Adaptive AI — adjusts difficulty based on your performance
-  ✅ Difficulty presets: Easy / Medium / Hard / Grandmaster
-  ✅ Smooth piece movement animation
-  ✅ Post-game analysis with move-by-move feedback
-  ✅ AI explains every move it makes in plain English
-  ✅ Hint system — press H to see the best move highlighted
-  ✅ Undo — press Z to take back your last move
-  ✅ Move history log on the right panel
-  ✅ Captured pieces display
-  ✅ Check / checkmate / stalemate detection
+  Full chess with all rules (castling, en passant, promotion)
+  Adaptive AI — adjusts difficulty based on your performance
+  Difficulty presets: Easy / Medium / Hard / Grandmaster
+  Smooth piece movement animation
+  Post-game analysis with move-by-move feedback
+  AI explains every move it makes in plain English
+  Hint system — press H to see the best move highlighted
+  Undo — press Z to take back your last move
+  Move history log on the right panel
+  Captured pieces display
+  Check / checkmate / stalemate detection
 
 INSTALL:
   pip install pygame chess
@@ -991,16 +991,16 @@ class ChessGame:
             prefix   = f"{move_num:>2}. {who:3} {san:<8}"
 
             if captured and cap_val >= 3:
-                lines.append(f"✅ {prefix} Great capture! Won a {PIECE_NAMES.get(captured.piece_type,'piece')} (+{cap_val})")
+                lines.append(f"{prefix} Great capture! Won a {PIECE_NAMES.get(captured.piece_type,'piece')} (+{cap_val})")
                 good_moves += 1
             elif delta < -150 and not is_ai:
-                lines.append(f"❌ {prefix} Blunder! This lost significant material.")
+                lines.append(f"{prefix} Blunder! This lost significant material.")
                 blunders += 1
             elif delta < -60 and not is_ai:
                 lines.append(f"⚠  {prefix} Mistake — a better move was available.")
                 mistakes += 1
             elif delta > 100 and not is_ai:
-                lines.append(f"✅ {prefix} Excellent move!")
+                lines.append(f"{prefix} Excellent move!")
                 good_moves += 1
             else:
                 lines.append(f"   {prefix}")
@@ -1008,9 +1008,9 @@ class ChessGame:
         lines.append("")
         lines.append(f"Summary: {good_moves} great moves  |  {mistakes} mistakes  |  {blunders} blunders")
         if blunders == 0 and mistakes <= 1:
-            lines.append("⭐ Outstanding game — very clean play!")
+            lines.append("Outstanding game — very clean play!")
         elif blunders <= 1:
-            lines.append("✅ Good game — just a few errors.")
+            lines.append("Good game — just a few errors.")
         else:
             lines.append("Keep practicing — focus on avoiding piece drops!")
 
@@ -1018,7 +1018,7 @@ class ChessGame:
 
     # ── Main loop ─────────────────────────────────────────────────────────────
     def run(self):
-        print("  ✅ Chess engine started!")
+        print(" Chess engine started!")
         print("  Controls: Click to move | H=Hint | Z=Undo | R=Restart | Q=Quit\n")
 
         while True:
