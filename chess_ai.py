@@ -6,14 +6,14 @@
 ╚══════════════════════════════════════════════════════════════╝
 
 FEATURES:
-  ✅ Full chess with all rules (castling, en passant, promotion)
-  ✅ Adaptive AI — adjusts difficulty based on your performance
-  ✅ AI explains every move it makes in plain English
-  ✅ Hint system — press H to see the best move highlighted
-  ✅ Undo — press Z to take back your last move
-  ✅ Move history log on the right panel
-  ✅ Captured pieces display
-  ✅ Check / checkmate / stalemate detection
+  Full chess with all rules (castling, en passant, promotion)
+  Adaptive AI — adjusts difficulty based on your performance
+  AI explains every move it makes in plain English
+  Hint system — press H to see the best move highlighted
+  Undo — press Z to take back your last move
+  Move history log on the right panel
+  Captured pieces display
+  Check / checkmate / stalemate detection
 
 INSTALL:
   pip install pygame chess
@@ -695,7 +695,7 @@ class ChessGame:
 
     # ── Main loop ─────────────────────────────────────────────────────────────
     def run(self):
-        print("  ✅ Chess engine started!")
+        print(" Chess engine started!")
         print("  Controls: Click to move | H=Hint | Z=Undo | R=Restart | Q=Quit\n")
 
         while True:
